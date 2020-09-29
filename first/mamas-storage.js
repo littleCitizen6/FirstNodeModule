@@ -1,12 +1,12 @@
-import { v4 as uuidv4, v4 } from 'uuid';
-
+var uuid = require('uuid');
 var module;
+
 class InMemoryStorage{
     constructor(){
         this.storage= new Map();
     }
     Create(collectionName, item){
-        item.id = uuidv4();
+        item.id = uuid.v4();
         if(!this.storage.has(collectionName))
         {
             this.storage.set(collectionName,[]);
@@ -36,7 +36,8 @@ class InMemoryStorage{
     }
 }
 
-module.exports.InMemoryStorage.find;
-module.exports.InMemoryStorage.Create;
-module.exports.InMemoryStorage.Where;
-module.exports.InMemoryStorage.remove;
+var x = new InMemoryStorage();
+module.exports.find = x.find;
+module.exports.Create = x.Create;
+module.exports.Where = x.Where;
+module.exports.remove = x.remove;

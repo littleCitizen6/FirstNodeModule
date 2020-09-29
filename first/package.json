@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/littleCitizen6/FirstNodeModule#readme",
   "dependencies": {
+    "uuid": "^8.3.0",
     "v4": "0.0.1"
   }
 }
