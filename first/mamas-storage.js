@@ -1,11 +1,10 @@
 var uuid = require('uuid');
-var module;
 
 class InMemoryStorage{
     constructor(){
         this.storage= new Map();
     }
-    Create(collectionName, item){
+    create(collectionName, item){
         item.id = uuid.v4();
         if(!this.storage.has(collectionName))
         {
@@ -14,6 +13,7 @@ class InMemoryStorage{
         this.storage.get(collectionName).push(item);
         return item;
     }
+
     find(collectionName, findFunc){
         return this.storage.get(collectionName).filter(item => findFunc(item))
     }
@@ -36,8 +36,5 @@ class InMemoryStorage{
     }
 }
 
-var x = new InMemoryStorage();
-module.exports.find = x.find;
-module.exports.Create = x.Create;
-module.exports.Where = x.Where;
-module.exports.remove = x.remove;
+// module.storage = new InMemoryStorage();
+module.exports = InMemoryStorage;
