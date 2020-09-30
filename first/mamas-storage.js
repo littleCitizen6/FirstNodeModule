@@ -38,3 +38,5 @@ class InMemoryStorage{
 
 // module.storage = new InMemoryStorage();
 module.exports = InMemoryStorage;
+var shered = new InMemoryStorage();
+module.exports.sharedStorage = shered;
