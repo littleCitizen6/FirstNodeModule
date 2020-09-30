@@ -1,0 +1,23 @@
+{
+  "name": "mamas-storage",
+  "version": "1.0.0",
+  "description": "first exc",
+  "main": "mamas-storage.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/littleCitizen6/FirstNodeModule.git"
+  },
+  "author": "lc6",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/littleCitizen6/FirstNodeModule/issues"
+  },
+  "homepage": "https://github.com/littleCitizen6/FirstNodeModule#readme",
+  "dependencies": {
+    "uuid": "^8.3.0",
+    "v4": "0.0.1"
+  }
+}
